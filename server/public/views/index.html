@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Data APIs!</title>
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <!-- Angular -->
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/ang_app.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <h1 class="jumbotron">Find YOUR NEW Pet</h1>
+
+    <div class="infoWindow">
+    <div class="container" ng-controller="dogController">
+        <button class="btn-default" ng-click="getRandomDog()">Random Dog</button>
+        <div class="petName">
+            <h4>{{pet.name.$t}}</h4></div>
+        <img class="petImage" ng-show="pet.media.photos.photo[2].$t !== null ? true : false" ng-src="{{pet.media.photos.photo[2].$t}}" height='300' width='300' />
+
+        <div class="petDescription">{{pet.description.$t}}</div>
+
+    </div>
+
+    <div class="container" ng-controller="birdController">
+        <button class="btn-default" ng-click="getRandomBird()">Random Bird</button>
+        <div class="petName">
+            <h4>{{pet.name.$t}}</h4></div>
+        <img class="petImage" ng-show="pet.media.photos.photo[2].$t !== null ? true : false" ng-src="{{pet.media.photos.photo[2].$t}}" height='300' width='300' />
+        <div class="petDescription">{{pet.description.$t}}</div>
+
+    </div>
+
+    <div class="container" ng-controller="catController">
+        <button class="btn-default" ng-click="getRandomCat()">Random Cat</button>
+        <div class="petName">
+            <h4>{{pet.name.$t}}</h4></div>
+        <img class="petImage" ng-show="pet.media.photos.photo[2].$t !== null ? true : false" ng-src="{{pet.media.photos.photo[2].$t}}" height='300' width='300' />
+
+        <div class="petDescription">{{pet.description.$t}}</div>
+
+    </div>
+
+</div>
+
+    <!-- <div class="col-md-6">
+        <h2>{{pet.name.$t}}</h2>
+        <p>{{pet.description.$t}}</p>
+        <img  />
+    </div> -->
+
+</body>
+
+</html>
